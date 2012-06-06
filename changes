@@ -1,0 +1,14 @@
+Changes made after Initial Release:
+
+----------------------------------
+* Jun 05 2012:
+	* Updated authxml_demographic_details to Auth API 1.6
+    * Added new API biometric_proto_details for protobuf. 
+
+-------------------------------xxxxxxx--------------------------------------:
+----------------------------------
+* Nov 22 2011:
+	* Added one more API, authxml_biometric_with_fdc. This accepts fdc attribute value additionally.
+	* Changes made in pidxml_biometric. Added <Meta> tag, and fdc attribute.
+
+-------------------------------xxxxxxx--------------------------------------:

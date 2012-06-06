@@ -1,0 +1,136 @@
+package pbuf;
+
+message Pid {
+	required string ver = 1;
+	required string ts = 2;
+	optional Demo demo = 3;
+	optional Bios bios = 4;
+	optional Pv pv = 5;
+	required string ts1 = 6;
+	required string ts2 = 7;
+	required string ts3 = 8;
+	optional string ts4 = 9;
+}
+
+message Demo {
+	optional LangCode lang = 1;
+	optional Pi pi = 2;
+	optional Pa pa = 3;
+	optional Pfa pfa = 4;
+	required string name = 5;
+}
+
+enum LangCode {
+	Assamese = 01;
+	Bengali = 02;
+	Gujarati = 05;
+	Hindi = 06;
+	Kannada = 07;
+	Malayalam = 11;
+	Manipuri = 12;
+	Marathi = 13;
+	Oriya = 15;
+	Punjabi = 16;
+	Tamil = 20;
+	Telugu = 21;
+	Urdu = 22;	
+}
+
+message Pi {
+	optional Ms ms = 1;
+	optional string name = 2;
+	optional int32 mv = 3;
+	optional string lname = 4;
+	optional int32 lmv = 5;
+	
+	enum Gender {
+		F = 1;
+		M = 2;
+		T = 3;
+	};
+
+	optional Gender gender = 6;
+	optional Dob dob = 7;
+	
+	enum Dobt {
+		V = 1;
+		D = 2;
+		A = 3;
+	};
+	
+	optional Dobt dobt = 8;
+	optional int32 age = 9;
+	optional string email = 10;
+	optional string phone = 11;
+}
+
+message Pa {
+	optional Ms ms = 1;
+	optional string co = 2;
+	optional string house = 3;
+	optional string street = 4;
+	optional string lm = 5;
+	optional string loc = 6;
+	optional string vtc = 7;
+	optional string subdist = 8;
+	optional string dist = 9;
+	optional string state = 10;
+	optional string pc = 11;
+	optional string po = 12;
+}
+
+message Pfa {
+	optional Ms ms = 1;
+	optional string av = 2;
+	optional int32 mv = 3;
+	optional string lav = 4;
+	optional int32 lmv = 5;
+}
+
+message Dob {
+	required int32 year = 1;
+	optional int32 month = 2;
+	optional int32 day = 3;
+}
+
+enum Ms {
+	E = 1;
+	P = 2;
+	F = 3;
+}
+
+message Bios {
+	repeated Bio bio = 1;
+};
+
+message Bio {
+	required BioType type = 1;
+	required Position posh = 2;
+	required bytes content = 3;
+}
+
+enum BioType {
+	FMR = 0;
+	FIR = 1;
+	IIR = 2;
+}
+
+enum Position {
+	LEFT_IRIS = 1;
+	RIGHT_IRIS = 2;
+	LEFT_INDEX = 3;
+	LEFT_LITTLE = 4;
+	LEFT_MIDDLE = 5;
+	LEFT_RING = 6;
+	LEFT_THUMB = 7;
+	RIGHT_INDEX = 8;
+	RIGHT_LITTLE = 9;
+	RIGHT_MIDDLE = 10;
+	RIGHT_RING = 11;
+	RIGHT_THUMB = 12;
+}
+
+message Pv {
+	optional string otp = 1;
+	optional string pin = 2;
+}
